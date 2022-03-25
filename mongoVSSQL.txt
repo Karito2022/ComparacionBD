@@ -1,0 +1,51 @@
+
+
+CREATE DATABASE nombre_bd;
+use nombre_db
+
+Table
+Collection
+
+Renglon
+Document
+
+DROP DATABASE nombre_db
+db.dropDatabase()
+
+show dbs - Mostrar las bases de datos actuales
+
+show collections - Mostrar todas las colecciones dentro de una base de datos
+
+use nombre_bd - Crear una nueva base de datos o seleccionar una base de datos existente
+
+CREATE TABLE nombre_tabla( 
+);
+db.createCollection( nombre_tabla )
+
+DROP TABLE nombre_tabla;
+db.nombre_tabla.drop()
+
+INSERT INTO nombre_tabla(columna1, columan2, ...)
+VALUES('valorCol1', 'valorCol2', ... );
+db.nombre_tabla.insert( { propiedad1 : 'valor1', propiedad2 : 'valor2' } )
+let nuevoDocumento = { propiedad1 : 'valor1', propiedad2 : 'valor2' };
+db.nombre_tabla.insert( nuevoDocument )
+
+SELECT *
+FROM nombre_tabla
+db.nombre_tabla.find()
+
+SELECT columna1, columan2
+FROM nombre_tabla
+WHERE condicion;
+db.nombre_tabla.find( { condicion } )
+
+UPDATE nombre_tabla
+SET colum1 = valor1, columna2 = valor2 , ...
+WHERE condicion;
+db.nombre_tabla.update( {condicion}, { $set: { valor1, valor2 } } )
+
+DELETE 
+FROM nombre_tabla
+WHERE condicion;
+db.nombre_tabla.remove( {condicion} )
